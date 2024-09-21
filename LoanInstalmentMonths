@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+float ReadPositiveNumber(string Message)
+{
+    float Number = 0;
+    do
+    {
+        cout << Message << endl;
+        cin >> Number;
+    } while (Number <= 0);
+    return Number;
+}
+int CalculateTotalMonths(float LoanAmount, float MonthlyPayment)
+{
+    int TotalMonths = ceil(LoanAmount / MonthlyPayment);
+    return TotalMonths;
+}
+int main()
+{
+    float LoanAmount= ReadPositiveNumber("enter loan amount:");
+    float MonthlyPayment= ReadPositiveNumber("enter monthly payment:");
+    cout << CalculateTotalMonths(LoanAmount, MonthlyPayment) << " months";
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

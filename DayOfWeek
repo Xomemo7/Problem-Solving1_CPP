@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+enum enDay { sunday = 1, monday, tuesday, wednesday, thursday, friday, saturday };
+int ReadNumberInRange(string Message,int from,int to)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (!(Number <= to&&Number>=from));
+	return Number;
+}
+enDay ReadDay()
+{
+	enDay day;
+	return day = (enDay)ReadNumberInRange("enter day number:", 1, 7);
+}
+string PrintResult(enDay day)
+{
+			switch (day)
+	{
+	case enDay::sunday:
+		return "sunday";
+	case enDay::monday:
+		return "monday";
+	case enDay::tuesday:
+		return "tuesday";
+	case enDay::wednesday:
+		return "wednesday";
+	case enDay::thursday:
+		return "thursday";
+	case enDay::friday:
+		return"friday";
+	case enDay::saturday:
+		return "saturday";
+		} 
+}
+
+int main()
+{
+	enDay day = ReadDay();
+	cout<<PrintResult(day);
+
+	return 0;
+}
+
+

@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int ReadAge()
+{
+	int age;
+	cout << "enter age:\n";
+	cin >> age;
+	return age;
+}
+bool IsValid(int age,int from,int to)
+{
+	return(age >= from && age <= to);
+}
+int ReadUntilAgeBetween(int from,int to)
+{
+	int age = 0;
+	do {
+		age = ReadAge();
+	} while (!IsValid(age, from, to));
+
+	return age;
+}
+void PrintResult(int age)
+{
+	if (IsValid(age,18,45))
+		cout << "Valid Age";
+	else
+		cout<< "Invalid Age";
+}
+int main()
+{
+	
+	PrintResult(ReadUntilAgeBetween(18,45));
+	return 0;
+}
+
+

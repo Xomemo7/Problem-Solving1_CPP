@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+float ReadLengthOfSquare()
+{
+	float LengthOfSquare;
+	cout << "enter length of the square that has circle inscribed in it:\n";
+	cin >> LengthOfSquare;
+	return LengthOfSquare;
+}
+float CircleArea(float LengthOfSquare)
+{
+	float Area=pow(LengthOfSquare, 2) / 4 * 3.14;
+	return Area;
+}
+void PrintResult(float Area)
+{
+	cout << "area of circle= " << Area;
+}
+int main()
+{
+	
+	PrintResult(CircleArea(ReadLengthOfSquare()));
+
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float Marks[3];
+    cout << "enter the first mark:\n";
+    cin >> Marks[0];
+    cout << "enter the second mark:\n";
+    cin >> Marks[1];
+    cout << "enter the third mark:\n";
+    cin >> Marks[2];
+    float average = (Marks[0] + Marks[1] + Marks[2]) / 3;
+    cout << "************************************************\n";
+    cout << "average= " << average;
+   
+    return 0;
+}
+
+

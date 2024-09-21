@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+struct strInfo
+{
+    string FirstName;
+    string LastName;
+    short Age;
+    string Phone;
+};
+void ReadInfo(strInfo &Info)
+{
+    cout << "enter first name:\n";
+    cin >> Info.FirstName;
+    cout << "enter last name:\n";
+    cin >> Info.LastName;
+    cout << "enter Age:\n";
+    cin >> Info.Age;
+    cout << "enter phone:\n";
+    cin >> Info.Phone;
+    cout << "\n*******************************\n";
+}
+void PrintInfo(strInfo Info)
+{
+    cout << "first name: " << Info.FirstName << endl;
+    cout <<"last name: "<< Info.LastName << endl;
+    cout <<"Age:"<< Info.Age << endl;
+    cout <<"phone:"<< Info.Phone << endl;
+    cout << "*******************************\n";
+}
+void ReadPersonsInfo(strInfo person[2])
+{
+    ReadInfo(person[0]);
+    ReadInfo(person[1]);
+}
+void PrintPersonsInfo(strInfo person[2])
+{
+    PrintInfo(person[0]);
+    PrintInfo(person[1]);
+}
+int main()
+{
+    strInfo person[2];
+    ReadPersonsInfo(person);
+    PrintPersonsInfo(person);
+   
+    
+    return 0;
+}
+
+

@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+struct stTotalDuration
+{
+    int NumOfDays, NumOfHours, NumOfMinutes, NumOfSeconds;
+};
+float ReadPositiveNumber(string Message)
+{
+    float Number = 0;
+    do
+    {
+        cout << Message << endl;
+        cin >> Number;
+    } while (Number <= 0);
+    return Number;
+}
+stTotalDuration CalculateTotalDuration(int TotalSeconds)
+{
+    const int SecondsPerDay = 24 * 60 * 60;
+    const int SecondsPerHour = 60 * 60;
+    const int SecondsPerMinute =60;
+
+    stTotalDuration Duration;
+    int Remainder;
+    Duration.NumOfDays = floor(TotalSeconds/ SecondsPerDay);
+    Remainder = TotalSeconds % SecondsPerDay;
+    Duration.NumOfHours = floor(Remainder / SecondsPerHour);
+    Remainder = Remainder % SecondsPerHour;
+    Duration.NumOfMinutes = floor(Remainder / SecondsPerMinute);
+    Remainder = Remainder % SecondsPerMinute;
+    Duration.NumOfSeconds = Remainder;
+    
+    return Duration;
+}
+void PrintTaskDuration(stTotalDuration Duration)
+{
+    cout << endl;
+    cout << Duration.NumOfDays << ":"
+        << Duration.NumOfHours << ":"
+        << Duration.NumOfMinutes << ":"
+        << Duration.NumOfSeconds << "\n";
+} 
+
+int main()
+{
+    int TotalSeconds = ReadPositiveNumber("Enter TotalSeconds");
+    PrintTaskDuration(CalculateTotalDuration(TotalSeconds));
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

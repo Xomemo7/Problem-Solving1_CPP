@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int ReadNum()
+{
+	int num;
+	cout << "enter a number:\n";
+	cin >> num;
+	return num;
+}
+void PrintLoopByWhile(int num)
+{
+	int counter = 1;
+	while (counter <= num)
+	{
+		cout << counter << endl;
+		counter++;
+	}
+
+}
+void PrintLoopByFor(int num)
+{
+	for (int Counter = 1; Counter <= num; Counter++)
+		cout << Counter << endl;
+}
+void PrintLoopByDo(int num)
+{
+	int Counter =0 ;
+	do
+	{
+		Counter++;
+		cout << Counter<<endl;
+	} while (Counter < num);
+
+}
+int main()
+{
+	int num = ReadNum();
+	PrintLoopByWhile(num);
+	PrintLoopByFor(num);
+	PrintLoopByDo(num);
+	return 0;
+}
+
+

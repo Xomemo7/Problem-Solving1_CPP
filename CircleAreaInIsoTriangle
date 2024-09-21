@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void ReadTriangleThatHasCircle(float& a,float& b)
+{
+	cout << "enter base length and length of district of triangle that has circle iscribed in it:\n";
+	cin >> a >> b;
+}
+float CircleArea(float a, float b)
+{
+	float Area=3.14 * pow(b, 2) / 4 * ((2 * a - b) / (2 * a + b));
+	return Area;
+}
+void PrintResult(float Area)
+{
+	cout << "area of circle= " <<Area;
+}
+int main()
+{
+	float a, b;
+	ReadTriangleThatHasCircle(a, b);
+	PrintResult(CircleArea(a, b));
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

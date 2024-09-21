@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+enum enOddEven{Odd=1,Even=2};
+int ReadNum()
+{
+	int num;
+	cout << "enter a number:\n";
+	cin >> num;
+	return num;
+}
+enOddEven CheckNumType(int num)
+{
+	if (num % 2 != 0)
+		return enOddEven::Odd;
+	else
+		return enOddEven::Even;
+}
+int GetSumOddNum(int num)
+{
+
+	int counter = 1,Sum=0;
+	while (counter <= num)
+	{
+		if(CheckNumType(counter)==enOddEven::Odd)
+		Sum += counter;
+		counter++;
+	}
+	return Sum;
+
+}
+void PrintSum(int Sum,int num)
+{
+	cout << "The summation of odd numbers from 1 to " << num << " is: " << Sum;
+}
+int main()
+{
+	int num = ReadNum();
+	PrintSum(GetSumOddNum(num),num);
+	return 0;
+}
+
+

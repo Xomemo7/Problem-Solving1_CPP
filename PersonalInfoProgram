@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+struct stAdress
+{
+    string street, milestone;
+
+};
+struct stContact
+{
+    string email;
+    string phone;
+    stAdress Adress;
+
+};
+struct stPerson
+{
+    string Name; short Age; string City;
+    string Country; unsigned int MonthlySalary; unsigned int YearlySalary;
+    stContact Contact;
+};
+
+void ReadInfo(stPerson &Info)
+{
+    cout << "*********************************************************************\n";
+    cout << "enter your name:\n";
+    cin >> Info.Name;
+    cout << "enter your age:\n";
+    cin >> Info.Age;
+    cout << "enter your city:\n";
+    cin >> Info.City;
+    cout << "enter your country:\n";
+    cin >> Info.Country;
+    cout << "enter your Monthly Salary:\n";
+    cin >> Info.MonthlySalary;
+    Info.YearlySalary = Info.MonthlySalary * 12;
+    /*cout << "enter your adress(street name,milestone):\n";
+    cin >> person[counter].Contact.Adress.street >> person[counter].Contact.Adress.milestone;
+    cout << "enter your contact info(phone number,email):\n";
+    cin >> person[counter].Contact.phone >> person[counter].Contact.email;*/
+    cout << "*********************************************************************\n";
+}
+void PrintInfo(stPerson Info)
+{
+    
+    cout << "\nName: " << Info.Name << "\nAge: " << Info.Age << "\nCity: " << Info.City << "\nCountry: " << Info.Country <<
+        "\nMonthly Salary: " << Info.MonthlySalary << "\nYearly Salary: " << Info.YearlySalary << endl;
+    /*"\nAdress:(Street Name: " << person[counter].Contact.Adress.street << " ,Milestone: " << person[counter].Contact.Adress.milestone << ")" << endl << "Contact Info:(Phone Number: "
+    << person[counter].Contact.phone << " ,Email Adress: " << person[counter].Contact.email << ")" << endl;*/
+    cout << "\n*********************************************************************\n";
+}
+void ReadPersonsInfo(stPerson person[100], int& NumberOfPersons)
+{
+    cout << "how many people to read their info?\n";
+    cin >> NumberOfPersons;
+    for (int counter = 0; counter <= NumberOfPersons - 1; counter++)
+    {
+        cout << "person" << counter + 1 << endl;
+        ReadInfo(person[counter]);
+
+    }
+}
+void PrintPersonsInfo(stPerson person[100], int NumberOfPersons)
+{
+    for (int counter=0;counter<=NumberOfPersons-1;counter++)
+    { 
+        cout << "person" << counter + 1;
+        PrintInfo(person[counter]);
+    }
+}
+
+int main()
+{
+    int NumberOfPersons=0;
+    stPerson person[100];
+    ReadPersonsInfo(person,NumberOfPersons);
+    PrintPersonsInfo(person, NumberOfPersons);
+    return 0;
+}
+
+

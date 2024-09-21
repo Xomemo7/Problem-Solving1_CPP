@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int x = 20, y = 80;//global variables
+void ComapareVariables()
+{
+    int x = 1000, y = 400;//local
+    cout << x <<endl<< y;
+}
+int main()
+{
+    int x = 100, y = 14;//local
+    cout << x <<endl<< y<<endl;
+    cout << ::x <<endl<< ::y<<endl;
+    ComapareVariables();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

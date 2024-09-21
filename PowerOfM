@@ -1,0 +1,18 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+int power(int num, int m) 
+{
+	return pow(num, m);
+}
+int main()
+{
+
+	int num;
+	short m;
+	cout << "enter a number and its power:\n";
+	cin >> num >> m;
+	cout << power(num,m);
+
+	return 0;
+}

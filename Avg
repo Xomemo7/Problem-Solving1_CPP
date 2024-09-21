@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+void ReadNumbers(float &Num1, float &Num2, float &Num3)
+{
+	cout << "enter the first number:\n";
+	cin >> Num1;
+	cout << "enter the second number:\n";
+	cin >> Num2;
+	cout << "enter the third number:\n";
+	cin >> Num3;
+}
+float GetSum(float Num1, float Num2, float Num3)
+{
+	 return Num1 + Num2 + Num3;
+}
+float GetAverage(float Num1, float Num2, float Num3)
+{
+	return (GetSum(Num1, Num2, Num3))/3;
+}
+
+void PrintResults(float Average)
+{
+	
+	cout << "Average= " << Average<<endl;
+}
+
+int main()
+{
+	float Num1, Num2, Num3;
+	ReadNumbers(Num1, Num2, Num3);
+	PrintResults(GetAverage(Num1, Num2, Num3));
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

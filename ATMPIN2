@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+int ReadPIN()
+{
+	int PIN;
+	PIN = ReadPositiveNumber("Enter PIN:");
+	return PIN;
+}
+bool IsPIN(int PIN)
+{
+	
+	return (PIN == 1234);
+}
+void PrintBalance()
+{
+	int PIN;
+	short Counter = 3;
+		do
+		{
+			Counter--;
+			PIN = ReadPIN();
+			if (IsPIN(PIN))
+			{
+				system("color 2F");
+				cout << "Your balance is 7500";
+				break;
+			}
+			else
+			{
+				system("color 4F");
+				cout << "wrong PIN, ";
+			}
+		} while (Counter >= 1);
+		if (PIN != 1234)
+		{
+			system("color 4F");
+			cout << "Your card is locked";
+		}
+
+}
+int main()
+{
+
+	PrintBalance();
+	return 0;
+}
+
+

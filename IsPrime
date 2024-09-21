@@ -1,0 +1,42 @@
+#include <iostream>
+#include<string>
+using namespace std;
+float ReadNumber(string Message)
+{
+	float Number = 0;
+	cout << Message << endl;
+	cin >> Number;
+	return Number;
+}
+float ValidatePositiveNumber()
+{
+	float Number=0;
+	do
+	{
+		Number=ReadNumber("Enter positive number:");
+	} while (Number < 0);
+	return Number;
+}
+bool IsPrime(int Number)
+{
+	bool isPrime=1;
+	for (int counter = 2; counter <= Number / 2; counter++)
+	{
+		if (Number % counter == 0)
+			return isPrime=0;
+	}
+}
+string Result(int Number)
+{
+	if (IsPrime(Number))
+		return "is prime";
+	else
+		return "is not prime";
+}
+int main()
+{
+	cout << Result(ValidatePositiveNumber());
+	
+
+	return 0;
+}

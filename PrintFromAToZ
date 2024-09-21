@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+void printloop()
+{
+	int counter = 65;
+	while (counter <= 90)
+	{
+		cout << char(counter) << endl;
+		counter++;
+	}
+}
+int main()
+{
+	printloop();
+	return 0;
+}
+
+

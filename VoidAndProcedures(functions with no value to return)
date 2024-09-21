@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+void MyCard()
+{
+    string name="Omar Abu-Hadhoud", city="Amman", country="Jordan";
+    short age=18;
+    cout << "**********************************";
+    cout << "\nName: " << name;
+    cout << "\nAge: " << age;
+    cout << "\nCity: " << city;
+    cout << "\nCountry: " << country;
+    cout << "\n**********************************\n";
+}
+void MyStars()
+{
+    cout << "**************************\n";
+    cout << "**************************\n";
+    cout << "**************************\n";
+    cout << "**************************\n";
+}
+void MyPassion()
+{
+    cout << "I love programming!\n\n";
+    cout << "I prommise to be the best developer ever!\n\n";
+    cout << "I know it will take some time to practise, but I will achieve my goal\n\n";
+    cout << "Best Regards,\n";
+    cout << "Mohammed Abu-Hadhoud\n";
+}
+void MyHStars()
+{
+    cout << "*              *\n";
+    cout << "*              *\n";
+    cout << "*              *\n";
+    cout << "****************\n";
+    cout << "*              *\n";
+    cout << "*              *\n";
+    cout << "*              *\n";
+}
+int main()
+{
+    MyStars();
+    MyCard();
+    MyStars();
+    MyHStars();
+    MyPassion();
+    MyPassion();
+    MyCard();
+
+
+    return 0;
+}

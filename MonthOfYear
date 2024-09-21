@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+enum enMonth { january = 1, february, march, april, may, june, july, august, september, october, november, december };
+int ReadNumberInRange(string Message, int from, int to)
+{
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (!(Number <= to && Number >= from));
+	return Number;
+}
+enMonth ReadMonth()
+{
+	enMonth month;
+	return month=(enMonth)ReadNumberInRange("Enter month N.O:", 1, 12);
+}
+string PrintResult(enMonth month)
+{
+	switch (month)
+	{
+	case enMonth::january:
+		return "january";
+	case enMonth::february:
+		return "february";
+
+	case enMonth::march:
+		return "march";
+		
+	case enMonth::april:
+		return "april";
+		
+	case enMonth::may:
+		return "may";
+		
+	case enMonth::june:
+		return "june";
+		
+	case enMonth::july:
+		return "july";
+		
+	case enMonth::august:
+		return "august";
+		
+	case enMonth::september:
+		return "september";
+		
+	case enMonth::october:
+		return "october";
+		
+	case enMonth::november:
+		return "november";
+		
+	case enMonth::december:
+		return "december";
+
+	default:
+		return "invalid number";
+	}
+}
+int main()
+{
+	cout << PrintResult(ReadMonth());
+
+	return 0;
+}
+
+

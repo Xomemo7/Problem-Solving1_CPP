@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int ReadNumber()
+{
+	int Number;
+	cout << "Enter a number:\n";
+	cin >> Number;
+	return Number;
+}
+int ReadPower()
+{
+	int Power;
+	cout << "Enter a power:\n";
+	cin >> Power;
+	return Power;
+}
+int GetNumberOfPower(int Number,int Power )
+{
+	if (Power == 0)
+		return 1;
+	int OriginalNumber = Number;
+	for (int Counter = 1; Counter < Power; Counter++)
+	{
+		Number *= OriginalNumber;
+	}
+	return Number;
+}
+void PrintResult(int Result)
+{
+	cout <<"Result= " << Result << endl;
+}
+int main()
+{
+	int Number=ReadNumber();
+	int Power =ReadPower();
+	PrintResult(GetNumberOfPower(Number,Power));
+	return 0;
+}

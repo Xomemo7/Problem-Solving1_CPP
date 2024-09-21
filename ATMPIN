@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+float ReadPositiveNumber(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+short ReadPIN()
+{
+	short PIN;
+	PIN = ReadPositiveNumber("Enter PIN:");
+	return PIN;
+}
+bool IsPIN()
+{
+	short PIN = ReadPIN();
+	return (PIN == 1234);
+}
+void PrintResult()
+{
+	bool Condition = IsPIN();
+	if (Condition)
+	{
+		system("color 2F");
+		cout << "your balance is 7500";
+	}
+	else
+	{
+		system("color 4F");
+		cout << "Wrong PIN";
+	}
+}
+int main()
+{
+	PrintResult();
+	return 0;
+}
+
+

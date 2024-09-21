@@ -1,0 +1,30 @@
+#include <iostream>
+#include<string>
+using namespace std;
+float ReadNumber(string Message)
+{
+	float Number = 0;
+	cout << Message << endl;
+	cin >> Number;
+	return Number;
+}
+float GetSum()
+{
+	int counter = 1;
+	float sum=0,Number=0;
+	do
+	{
+		Number = ReadNumber("Enter number "+to_string(counter)+":");
+		if (Number == -99)
+			break;
+		sum += Number;
+		counter++;
+	} while (Number != -99);
+	return sum;
+}
+int main()
+{
+	cout << "Sum= " << GetSum();
+
+	return 0;
+}

@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+void ReadTwoNumbers(float& Num1,float& Num2)
+{
+	cout << "Enter Number 1:\n";
+	cin >> Num1;
+	cout << "Enter Number 2:\n";
+	cin >> Num2;
+}
+float MaxOfTwoNumbers(float Num1, float Num2)
+{
+	if (Num1 > Num2)
+		return Num1;
+	else
+		return Num2;
+}
+void PrintResult(float Max)
+{
+	cout << "The max is " << Max;
+}
+int main()
+{
+	float Num1, Num2;
+	ReadTwoNumbers(Num1, Num2);
+	PrintResult(MaxOfTwoNumbers(Num1, Num2));
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+void ReadRectangleDimensions(int& d, int& a)
+{
+	cout << "enter the diagonal and side area of rectangle:\n";
+	cin >> d >> a;
+}
+float RecArea(int d, int a)
+{
+	 float Area=a * sqrt(pow(d, 2) - pow(a, 2));
+	 return Area;
+}
+void PrintResult(float Area)
+{
+	cout << "area of rectangle= " << Area;
+}
+int main()
+{
+	int d, a;
+	ReadRectangleDimensions(d, a);
+	PrintResult(RecArea(d, a));
+	
+	
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

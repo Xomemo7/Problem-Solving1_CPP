@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std;
+void ReadRectangleDimensions(float& Length, float& Width)
+{
+    cout << "enter length of rectangle: \n";
+    cin >> Length;
+    cout << "enter length of rectangle: \n";
+    cin >> Width;
+}
+float GetRectangleArea(float Length, float Width)
+{
+    return Length * Width;
+}
+void PrintRectangleArea(float Area)
+{
+    cout << "Area= " <<Area;
+}
+int main()
+{
+    float Length, Width;
+    ReadRectangleDimensions(Length, Width);
+    PrintRectangleArea(GetRectangleArea(Length, Width));
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

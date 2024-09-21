@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void ReadTriangleDimensions(int &Height,int &BaseLength)
+{
+    cout << "enter the height and base length of triangle:\n";
+    cin >> Height >> BaseLength;
+}
+float GetTriangleArea(int Height, int BaseLength)
+{
+    float Area= BaseLength / 2 * Height;
+    return Area;
+}
+void PrintArea(float Area)
+{
+    cout << "area of triangle= " << Area;
+}
+
+int main()
+{
+    int Height, BaseLength;
+    ReadTriangleDimensions(Height, BaseLength);
+    PrintArea(GetTriangleArea(Height, BaseLength));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

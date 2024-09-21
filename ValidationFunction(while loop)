@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int ReadIntNumberInRange(int from, int to)
+{
+    int number;
+    cout << "Please enter a number between " << from << " and " << to << ":"<<endl;
+    cin >> number;
+    while (number<from || number>to)
+    {
+        cout << "wrong number, enter a number between " << from << " and " << to << ":" << endl;
+        cin >> number;
+    }
+    return number;
+
+}
+int main()
+{
+    int from, to;
+    cout << "enter the range of the inputs:\n";
+    cout << "from: ";
+    cin >> from;
+    cout << "to: ";
+    cin >> to;
+    cout << "the number you entered is " << ReadIntNumberInRange(from, to);
+    return 0;
+}
+
+ 

@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int ReadNumber()
+{
+	float Num;
+	cout << "enter a number:\n";
+	cin >> Num;
+	return Num;
+}
+float GetHalfNumber(int Num)
+{
+	 
+	return float(Num) / 2;
+
+}
+void PrintHalfNumber(float Num)
+{
+	string Result= "Half of "+to_string(Num)+" is "+to_string(GetHalfNumber(Num));
+	cout << Result;
+
+}
+int main()
+{
+
+	PrintHalfNumber(ReadNumber());
+
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void MySumProcedure()
+{
+    int num1, num2;
+    cout << "enter number1:\n";
+    cin >> num1;
+    cout << "enter number2:\n";
+    cin >> num2;
+    cout << "********************************\n";
+    int sum = num1 + num2;
+    cout << sum<<endl;
+}
+int MySumFunction()
+{
+    int num1, num2;
+    cout << "enter number1:\n";
+    cin >> num1;
+    cout << "enter number2:\n";
+    cin >> num2;
+    cout << "********************************\n";
+    return num1 + num2;
+
+}
+int main()
+{
+    MySumProcedure();
+    cout << MySumFunction()+10 << endl;
+
+    return 0;
+}

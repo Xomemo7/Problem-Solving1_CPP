@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+void Read3Numbers(float& Num1,float& Num2,float& Num3)
+{
+	cout << "Enter Number 1:\n";
+	cin >> Num1;
+	cout << "Enter Number 2:\n";
+	cin >> Num2;
+	cout << "Enter Number 3:\n";
+	cin >> Num3;
+}
+float MaxOf3Numbers(float Num1, float Num2, float Num3)
+{
+	if (Num1 > Num2)
+		if (Num1 > Num3)
+			return Num1;
+		else
+			return Num3;
+	else
+		if (Num2 > Num3)
+			return Num2;
+		else
+			return Num3;
+}
+void PrintResult(float Max)
+{
+	cout << "The max is " << Max;
+}
+int main()
+{
+	float Num1, Num2,Num3;
+	Read3Numbers(Num1, Num2,Num3);
+	PrintResult(MaxOf3Numbers(Num1, Num2,Num3));
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

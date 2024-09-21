@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int ValidateNumberInRange(int From, int To)
+{
+	int Grade;
+	do
+	{
+		cout << "Enter grade between 0 and 100\n";
+		cin >> Grade;
+
+	} while (Grade < From || Grade > To);
+	return Grade;
+}
+char GetSymbol(int Grade, int Low, int High)
+{
+
+	if (Grade == 100)
+		return 'A';
+	for (int Counter = 65; Counter <= 69; Counter++)
+	{
+		if (Grade >= Low && Grade <= High)
+			return (char)Counter;
+		Low -= 10;
+		High -= 10;
+	}
+}
+void PrintSymbol(char Symbol)
+{
+	cout << Symbol;
+}
+int main()
+{
+	int Low = 90, High = 99;
+	int Grade = ValidateNumberInRange(0, 100);
+	PrintSymbol(GetSymbol(Grade, Low, High));
+	return 0;
+}
